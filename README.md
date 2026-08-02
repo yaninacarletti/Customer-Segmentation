@@ -1,42 +1,109 @@
 # Customer Segmentation
 
-El presente proyecto busca averiguar los distintos segmentos de clientes de un negocio retail.
-Advirtiéndose que el set de datos con el cuál se parte se encuentra recopilado a nivel 'Boleta' debiendo ser necesario agregarlo a nivel 'cliente' para cumplir lo cometido.
+Unsupervised learning workflow for identifying customer segments using PCA and K-Means clustering to support personalized marketing and business decision-making.
 
-Para lo cuál se trabajo de manera modular, aplicando diversas funciones para tratar los aspectos de calidad de datos y análisis exploratorio de los mismos (EDA).
-Una vez obtenida la data preprocesada, tras haber pasado por etapas de limpieza y unificación de formatos y comprendido la misma, tras la identificación de patrones, tendencias y correlaciones que pudiesen existir entre las distintas variables, se prosiguió a cambiar su granularidad. Como se mencionó con anterioridad, se partió de un dataset el cuál se encontraba a un nivel de detalle de 'Boleta' para arrivar a otro a un nivel de detalle de 'Cliente', siendo necesario generar nuevas features al último nivel de detalle mencionado y realizar un posterior EDA sobre el dataset resultante.
+**Portfolio Case Study:** https://yaninacarletti.github.io/projects/customer-segmentation
 
-La última etapa del notebook aborda el proceso de segmentación en sí. Explorando tres diferentes opciones de modelos de clustering y barriendo sobre diferentes combinaciones posibles de hiperparámetros que éstos pudiesen tomar. 
-Concretamente, se implementaron los siguientes modelos:
- - KMeans
- - Hierarchical Agglomerative
- - DBSCAN
- 
- para finalizar con una etapa de validación de clusters que permitió identificar cuál de ellos era el que presentaba mejor performance, para así arrivar a los segmentos de clientes buscados.
+## Business Problem
 
-  
- Diccionario de datos:
-- InvoiceNo: Nro identificador de cada boleta
-- InvoiceDate: Fecha de la boleta
-- CustomerId: Nro identificador de cada cliente
-- Quantity: Cantidad de unidades totales compradas
-- price_total: Precio total de la boleta
-- StockCode: Cantidad de unidades diferentes compradas
+Companies often serve customers with different behaviors, preferences and purchasing patterns. Treating all customers in the same way reduces the effectiveness of marketing campaigns and retention strategies.
 
+The objective of this project is to identify meaningful customer segments through unsupervised learning techniques, enabling targeted marketing actions and data-driven business decisions.
 
- Dependencias:
-- numpy
-- pandas
-- matplotlib.pyplot 
-- seaborn
-- functions
-- sklearn.preprocessing.StandardScaler
-- sklearn.decomposition.PCA
-- sklearn.cluster.KMeans
-- sklearn.cluster.AgglomerativeClustering
-- sklearn.cluster.DBSCAN
-- sklearn.metrics.davies_bouldin_score
-- sklearn.metrics.silhouette_score
-- scipy.spatial.distance.pdist
-- scipy.cluster.hierarchy.dendrogram
-- scipy.cluster.hierarchy.linkage
+## Solution
+
+The project was developed as a complete clustering workflow, including data preparation, feature engineering, dimensionality reduction, cluster generation and business interpretation.
+
+## Machine Learning Pipeline
+
+```text
+Raw Customer Data
+        ↓
+Data Cleaning
+        ↓
+Feature Engineering
+        ↓
+Feature Scaling
+        ↓
+PCA
+        ↓
+K-Means Clustering
+        ↓
+Cluster Analysis
+        ↓
+Business Insights
+```
+
+## Tech Stack
+
+### Programming
+
+* Python
+* Pandas
+* NumPy
+
+### Machine Learning
+
+* Scikit-Learn
+* PCA
+* K-Means
+
+### Visualization
+
+* Matplotlib
+* Seaborn
+
+### Development
+
+* Git
+* GitHub
+* Jupyter Notebook
+
+## Key Results
+
+* End-to-end customer segmentation workflow.
+* Dimensionality reduction using PCA.
+* K-Means clustering for customer grouping.
+* Business interpretation of customer segments.
+* Reproducible and modular analytical pipeline.
+
+## Project Structure
+
+```text
+data/
+notebooks/
+src/
+images/
+README.md
+```
+
+## How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yaninacarletti/customer-segmentation.git
+cd customer-segmentation
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the notebooks or Python scripts to reproduce the complete segmentation workflow.
+
+## Portfolio
+
+Read the complete case study with methodology, clustering pipeline and business interpretation:
+
+**https://yaninacarletti.github.io/projects/customer-segmentation**
+
+## Contact
+
+**Portfolio:** https://yaninacarletti.github.io
+
+**LinkedIn:** https://www.linkedin.com/in/yanina-carletti-a9b876102/
+
+**GitHub:** https://github.com/yaninacarletti
